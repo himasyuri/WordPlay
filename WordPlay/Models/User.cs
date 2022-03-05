@@ -10,6 +10,7 @@ namespace WordPlay.Models
 
     public class User : IdentityUser
     {
+        public int Age { get; set; }
         public DateTime CreateOn { get; set; } = DateTime.UtcNow;
     }
 }

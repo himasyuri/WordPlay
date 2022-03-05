@@ -10,13 +10,15 @@ namespace WordPlay.ViewModels
     {
 
         [Required]
-        [Display(Name ="Email")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [Display(Name ="Nickname")]
+        [Display(Name = "Nickname")]
         public string UserName { get; set; }
-
+        [Required]
+        [Display(Name ="Age")]
+        public int Age { get; set; }
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Пароль")]
@@ -27,13 +29,5 @@ namespace WordPlay.ViewModels
         [DataType(DataType.Password)]
         [Display(Name = "Подтвердить пароль")]
         public string PasswordConfirm { get; set; }
-
-        public RegisterViewModel(string email, string userName, string password, string passwordConfirm)
-        {
-            Email = email;
-            UserName = userName;
-            Password = password;
-            PasswordConfirm = passwordConfirm;
-        }
     }
 }

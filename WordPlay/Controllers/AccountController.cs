@@ -29,7 +29,7 @@ namespace WordPlay.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.UserName};
+                User user = new User { Email = model.Email, UserName = model.UserName, Age = model.Age};
                 // add user
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
